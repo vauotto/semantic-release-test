@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.0.1](https://github.com/vauotto/semantic-release-test/compare/v1.0.0...v1.0.1) (2024-02-15)
+
+
+### Bug Fixes
+
+* add token ([bb4833e](https://github.com/vauotto/semantic-release-test/commit/bb4833e4ac249f014579e12707ec5cc83ba5bfe1))
+
 # 1.0.0 (2024-02-15)
 
 
