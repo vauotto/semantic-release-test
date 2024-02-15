@@ -1,0 +1,37 @@
+name: Semantic release test
+
+
+on: 
+  push: 
+    branches: 
+      ["main"]
+
+  workflow_dispatch:
+
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+permissions:
+  contents: write
+    
+jobs: 
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get latest version of code
+        uses: actions/checkout@v3
+
+      - name: move .releaserc to root dir
+        run: mv .github/release.yml /
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+
+      - name: Setup semantic-release
+        run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog -D
+
+      - name: Run semantic-release
+        run: npx semantic-release
