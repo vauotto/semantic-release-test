@@ -1,6 +1,6 @@
 {
   "branches": "main",
-  "repositoryUrl": "https://github.com/vauotto/github-actions",
+  "repositoryUrl": "https://github.com/vauotto/semantic-release-test",
   "debug": "false",
   "plugins": [
     "@semantic-release/commit-analyzer",
@@ -23,7 +23,7 @@
       {
         "assets": [
           {
-            "path": "release/**"
+            "path": "/**"
           }
         ]
       }
